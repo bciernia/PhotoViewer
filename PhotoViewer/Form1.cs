@@ -22,8 +22,8 @@ namespace PhotoViewer
         {
             OpenFileDialog opf = new OpenFileDialog();
 
-            opf.Title = "Select your image";
-            opf.Filter = "image File (*.jpg; *.jpeg; *.bmp;) | *.jpg; *.jpeg; *.bmp;";
+            opf.Title = "Wybierz obraz: ";
+            opf.Filter = "Obraz  (*.jpg; *.jpeg; *.bmp;) | *.jpg; *.jpeg; *.bmp;";
 
             if (opf.ShowDialog() == DialogResult.OK)
             {
