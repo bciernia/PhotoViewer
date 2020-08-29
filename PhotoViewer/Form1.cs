@@ -29,11 +29,15 @@ namespace PhotoViewer
             opf.Title = "Wybierz obraz: ";
             opf.Filter = "Obraz  (*.jpg; *.jpeg;) | *.jpg; *.jpeg;";
 
+            opf.Multiselect = false;
+
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 if (File.Exists(_filePath))
+                {
+                    picBox.Image.Dispose();
                     File.Delete(_filePath);
-
+                }
                 Bitmap image = new Bitmap(opf.FileName);
                 picBox.Image = image;
                 picBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -53,6 +57,7 @@ namespace PhotoViewer
 
             if (result == DialogResult.Yes)
             {
+                picBox.Image.Dispose();
                 File.Delete(_filePath);
                 picBox.Image = null;
                 btnDelete.Enabled = false;
@@ -68,6 +73,7 @@ namespace PhotoViewer
                 Bitmap image = new Bitmap(_filePath);
                 picBox.Image = image;
                 picBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
             }
             _firstStart = false;
         }

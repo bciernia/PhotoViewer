@@ -74,8 +74,11 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.picBox);
+            this.MaximumSize = new System.Drawing.Size(688, 388);
+            this.MinimumSize = new System.Drawing.Size(688, 388);
             this.Name = "Form1";
-            this.Text = "Twoje zdjęcie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Photo Viewer";
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
 
