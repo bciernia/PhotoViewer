@@ -75,7 +75,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.picBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Twoje zdjęcie";
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
 
